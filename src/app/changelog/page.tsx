@@ -11,7 +11,8 @@ export const revalidate = 1800;
 
 export const metadata: Metadata = {
   title: "Changelogs",
-  description: "Stay up to date with new features, improvements, and bug fixes in Memos.",
+  description:
+    "Stay up to date with new features, improvements, and bug fixes in CloudOTP.",
 };
 
 export default function ChangelogPage() {
@@ -19,7 +20,9 @@ export default function ChangelogPage() {
     // Extract version numbers for sorting (v0.25.0 -> [0, 25, 0])
     const getVersionParts = (title: string) => {
       const match = title.match(/v?(\d+)\.(\d+)\.(\d+)/);
-      return match ? [parseInt(match[1]), parseInt(match[2]), parseInt(match[3])] : [0, 0, 0];
+      return match
+        ? [parseInt(match[1]), parseInt(match[2]), parseInt(match[3])]
+        : [0, 0, 0];
     };
 
     const versionA = getVersionParts(a.data.title);
@@ -45,7 +48,8 @@ export default function ChangelogPage() {
                 Changelogs
               </h1>
               <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-                Stay up to date with new features, improvements, and bug fixes in Memos.
+                Stay up to date with new features, improvements, and bug fixes
+                in CloudOTP.
               </p>
             </div>
 
@@ -59,7 +63,9 @@ export default function ChangelogPage() {
                   <article
                     key={entry.url}
                     className={`relative bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-xl sm:rounded-2xl p-4 sm:p-5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 shadow-sm ${
-                      isLatest ? "ring-2 ring-teal-500 border-teal-200 dark:border-teal-600" : ""
+                      isLatest
+                        ? "ring-2 ring-teal-500 border-teal-200 dark:border-teal-600"
+                        : ""
                     }`}
                   >
                     <Link href={entry.url} className="block group">
@@ -82,11 +88,14 @@ export default function ChangelogPage() {
                             <div className="flex items-center gap-2 text-gray-500 dark:text-gray-400 mt-1">
                               <CalendarIcon className="w-3 h-3 sm:w-4 sm:h-4" />
                               <span className="text-xs sm:text-sm">
-                                {new Date(entry.data.date).toLocaleDateString("en-US", {
-                                  year: "numeric",
-                                  month: "long",
-                                  day: "numeric",
-                                })}
+                                {new Date(entry.data.date).toLocaleDateString(
+                                  "en-US",
+                                  {
+                                    year: "numeric",
+                                    month: "long",
+                                    day: "numeric",
+                                  }
+                                )}
                               </span>
                             </div>
                           )}
@@ -118,19 +127,23 @@ export default function ChangelogPage() {
                 <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center">
                   <CalendarIcon className="w-6 h-6 sm:w-8 sm:h-8 text-gray-400" />
                 </div>
-                <h3 className="text-base sm:text-lg font-medium text-gray-900 dark:text-gray-100 mb-2">No changelog entries yet</h3>
-                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 px-4">Check back soon for updates and new releases.</p>
+                <h3 className="text-base sm:text-lg font-medium text-gray-900 dark:text-gray-100 mb-2">
+                  No changelog entries yet
+                </h3>
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 px-4">
+                  Check back soon for updates and new releases.
+                </p>
               </div>
             )}
 
             {/* Footer */}
             <div className="mt-12 sm:mt-16 lg:mt-20 pt-6 sm:pt-8 border-t border-gray-200 dark:border-gray-700 text-center">
               <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 mb-6 sm:mb-8 px-4">
-                Want to contribute to Memos or report an issue?
+                Want to contribute to CloudOTP or report an issue?
               </p>
               <div className="flex flex-col gap-3 sm:gap-4 sm:flex-row sm:justify-center max-w-sm sm:max-w-none mx-auto">
                 <a
-                  href="https://github.com/usememos/memos"
+                  href="https://github.com/Robert-Stackflow/CloudOTP"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white/80 dark:bg-gray-800/80 text-gray-700 dark:text-gray-200 font-semibold border border-gray-200 dark:border-gray-600 rounded-xl sm:rounded-2xl hover:bg-white dark:hover:bg-gray-700 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 backdrop-blur-sm text-sm sm:text-base"
@@ -138,7 +151,7 @@ export default function ChangelogPage() {
                   <span>View on GitHub</span>
                 </a>
                 <a
-                  href="https://github.com/usememos/memos/releases"
+                  href="https://github.com/Robert-Stackflow/CloudOTP/releases"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-teal-600 to-cyan-600 text-white font-semibold rounded-xl sm:rounded-2xl hover:from-teal-700 hover:to-cyan-700 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 shadow-lg text-sm sm:text-base"

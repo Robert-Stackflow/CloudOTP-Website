@@ -1,0 +1,9 @@
+{
+  "title": "Import and Export",
+  "description": "Learn how to import and export OTP tokens",
+  "pages": [
+    "import",
+    "import-third-party",
+    "export"
+  ]
+}

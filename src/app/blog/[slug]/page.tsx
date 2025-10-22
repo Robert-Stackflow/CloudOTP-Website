@@ -1,16 +1,23 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CalendarIcon, ArrowLeftIcon, ExternalLinkIcon } from "lucide-react";
+import {
+  CalendarIcon,
+  ArrowLeftIcon,
+  ExternalLinkIcon,
+  DownloadIcon,
+} from "lucide-react";
 import { blogSource } from "@/lib/source";
 import { DocsBody } from "fumadocs-ui/page";
-import { TOCProvider, TOCScrollArea, TOCItems } from "fumadocs-ui/components/layout/toc";
+import {
+  TOCProvider,
+  TOCScrollArea,
+  TOCItems,
+} from "fumadocs-ui/components/layout/toc";
 import { notFound } from "next/navigation";
 import { HomeLayout } from "fumadocs-ui/layouts/home";
 import { baseOptions } from "@/app/layout.config";
 import { Footer } from "@/components/footer";
 import { getMDXComponents } from "@/mdx-components";
-import { DocsSponsorCard } from "@/components/docs-sponsor-card";
-import { DocsCarbonAdCard } from "@/components/docs-carbon-ad-card";
 
 interface BlogPageProps {
   params: Promise<{ slug: string }>;
@@ -73,7 +80,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
                     })}
                   </span>
                 </div>
-                
+
                 {/* Tags */}
                 {data.tags && data.tags.length > 0 && (
                   <>
@@ -107,10 +114,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
               </article>
 
               {/* Mobile Ads - Show after content, before footer */}
-              <div className="lg:hidden mt-8 space-y-4">
-                <DocsSponsorCard />
-                <DocsCarbonAdCard />
-              </div>
+              <div className="lg:hidden mt-8 space-y-4"></div>
 
               {/* Footer */}
               <footer className="mt-8 sm:mt-12">
@@ -119,11 +123,14 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
                     <div>
                       <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
                         Published on{" "}
-                        {new Date(data.published_at).toLocaleDateString("en-US", {
-                          year: "numeric",
-                          month: "long",
-                          day: "numeric",
-                        })}
+                        {new Date(data.published_at).toLocaleDateString(
+                          "en-US",
+                          {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric",
+                          }
+                        )}
                       </p>
                     </div>
 
@@ -135,13 +142,13 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
                         More Posts
                       </Link>
                       <a
-                        href="https://github.com/usememos/memos"
+                        href="/docs/downloads"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group inline-flex items-center justify-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-teal-600 to-cyan-600 text-white font-semibold rounded-xl sm:rounded-2xl hover:from-teal-700 hover:to-cyan-700 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 shadow-lg text-sm sm:text-base"
                       >
-                        <span>Try Memos</span>
-                        <ExternalLinkIcon className="w-3 h-3 sm:w-4 sm:h-4 group-hover:scale-110 transition-transform" />
+                        <DownloadIcon className="w-3 h-3 sm:w-4 sm:h-4 group-hover:scale-110 transition-transform" />
+                        <span>Try CloudOTP</span>
                       </a>
                     </div>
                   </div>
@@ -158,7 +165,9 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
                   <div className="sticky top-24 space-y-4">
                     {/* TOC Card - Scrollable */}
                     <div className="p-1">
-                      <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">Table of Contents</h3>
+                      <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">
+                        Table of Contents
+                      </h3>
                       <TOCProvider toc={page.data.toc}>
                         <TOCScrollArea>
                           <TOCItems />
@@ -166,10 +175,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
                       </TOCProvider>
                     </div>
                     {/* Sponsor & Ads - Also sticky with TOC */}
-                    <div className="flex flex-col gap-2">
-                      <DocsSponsorCard />
-                      <DocsCarbonAdCard />
-                    </div>
+                    <div className="flex flex-col gap-2"></div>
                   </div>
                 </div>
               </div>
@@ -188,20 +194,22 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: BlogPageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: BlogPageProps): Promise<Metadata> {
   const { slug } = await params;
   const page = blogSource.getPage([slug]);
 
   if (!page) {
     return {
-      title: "Blog Post Not Found - Memos",
+      title: "Blog Post Not Found - CloudOTP",
     };
   }
 
   const { data } = page;
 
   return {
-    title: `${data.title} - Memos Blog`,
+    title: `${data.title} - CloudOTP Blog`,
     description: data.description,
     openGraph: {
       title: data.title,

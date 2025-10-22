@@ -1,11 +1,10 @@
 {
   "title": "User Guide",
-  "description": "Comprehensive guides for using Memos effectively",
+  "description": "Comprehensive guides for using CloudOTP effectively",
   "pages": [
-    "index",
-    "getting-started",
-    "content-syntax",
-    "shortcuts",
-    "tags"
+    "about-otp",
+    "add-token",
+    "gesture-lock",
+    "database-encryption"
   ]
 }

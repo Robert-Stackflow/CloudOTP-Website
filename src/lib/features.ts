@@ -1,5 +1,5 @@
 /**
- * Feature definitions and metadata for Memos
+ * Feature definitions and metadata for CloudOTP
  * This serves as the single source of truth for all feature-related data
  */
 
@@ -48,10 +48,11 @@ export const FEATURES = {
   "data-ownership": {
     title: "Complete Data Ownership",
     description:
-      "Take full control of your notes and data with Memos' privacy-first architecture that ensures your information never leaves your control.",
+      "Take full control of your notes and data with CloudOTP' privacy-first architecture that ensures your information never leaves your control.",
     hero: {
       title: "Your Data, Your Rules",
-      subtitle: "Complete ownership and control over every note, file, and piece of information in your Memos instance.",
+      subtitle:
+        "Complete ownership and control over every note, file, and piece of information in your CloudOTP instance.",
     },
     benefits: [
       "All data stored locally in your chosen database",
@@ -63,15 +64,18 @@ export const FEATURES = {
     useCases: [
       {
         title: "Personal Knowledge Management",
-        description: "Keep sensitive thoughts, ideas, and personal information completely private and under your control.",
+        description:
+          "Keep sensitive thoughts, ideas, and personal information completely private and under your control.",
       },
       {
         title: "Corporate Documentation",
-        description: "Store confidential business information without worrying about cloud provider access or data breaches.",
+        description:
+          "Store confidential business information without worrying about cloud provider access or data breaches.",
       },
       {
         title: "Compliance Requirements",
-        description: "Meet strict regulatory requirements by ensuring data never leaves your infrastructure.",
+        description:
+          "Meet strict regulatory requirements by ensuring data never leaves your infrastructure.",
       },
     ],
     techDetails: [
@@ -83,10 +87,12 @@ export const FEATURES = {
   },
   performance: {
     title: "High-Performance Backend",
-    description: "Built with Go for optimal resource utilization, lightning-fast response times, and minimal server requirements.",
+    description:
+      "Built with Go for optimal resource utilization, lightning-fast response times, and minimal server requirements.",
     hero: {
       title: "Built for Speed",
-      subtitle: "Go-powered backend delivers exceptional performance with minimal resource consumption.",
+      subtitle:
+        "Go-powered backend delivers exceptional performance with minimal resource consumption.",
     },
     benefits: [
       "Lightning-fast response times under high load",
@@ -98,15 +104,18 @@ export const FEATURES = {
     useCases: [
       {
         title: "Large Team Deployments",
-        description: "Support hundreds of concurrent users with minimal server resources.",
+        description:
+          "Support hundreds of concurrent users with minimal server resources.",
       },
       {
         title: "Resource-Constrained Environments",
-        description: "Run efficiently on VPS, Raspberry Pi, or low-power hardware.",
+        description:
+          "Run efficiently on VPS, Raspberry Pi, or low-power hardware.",
       },
       {
         title: "High-Traffic Scenarios",
-        description: "Handle peak usage periods without performance degradation.",
+        description:
+          "Handle peak usage periods without performance degradation.",
       },
     ],
     techDetails: [
@@ -118,10 +127,12 @@ export const FEATURES = {
   },
   "react-frontend": {
     title: "Modern React Frontend",
-    description: "Responsive, intuitive user interface built with modern React, TypeScript, and cutting-edge web technologies.",
+    description:
+      "Responsive, intuitive user interface built with modern React, TypeScript, and cutting-edge web technologies.",
     hero: {
       title: "Beautiful & Responsive",
-      subtitle: "Modern React interface that works seamlessly across all devices and screen sizes.",
+      subtitle:
+        "Modern React interface that works seamlessly across all devices and screen sizes.",
     },
     benefits: [
       "Responsive design optimized for mobile and desktop",
@@ -133,15 +144,18 @@ export const FEATURES = {
     useCases: [
       {
         title: "Mobile Note-Taking",
-        description: "Capture thoughts on the go with a mobile-optimized interface.",
+        description:
+          "Capture thoughts on the go with a mobile-optimized interface.",
       },
       {
         title: "Desktop Productivity",
-        description: "Full-featured desktop experience with keyboard shortcuts and advanced features.",
+        description:
+          "Full-featured desktop experience with keyboard shortcuts and advanced features.",
       },
       {
         title: "Cross-Device Sync",
-        description: "Seamless experience across phones, tablets, and computers.",
+        description:
+          "Seamless experience across phones, tablets, and computers.",
       },
     ],
     techDetails: [
@@ -153,10 +167,12 @@ export const FEATURES = {
   },
   "cross-platform": {
     title: "Cross-Platform Support",
-    description: "Deploy anywhere with native support for Linux, macOS, Windows, Docker, and Kubernetes environments.",
+    description:
+      "Deploy anywhere with native support for Linux, macOS, Windows, Docker, and Kubernetes environments.",
     hero: {
       title: "Deploy Anywhere",
-      subtitle: "Universal compatibility across all major platforms and deployment methods.",
+      subtitle:
+        "Universal compatibility across all major platforms and deployment methods.",
     },
     benefits: [
       "Native binaries for Linux, macOS, and Windows",
@@ -188,10 +204,12 @@ export const FEATURES = {
   },
   "customizable-ui": {
     title: "Configurable Interface",
-    description: "Customize your Memos instance with personalized branding, themes, and UI elements to match your style.",
+    description:
+      "Customize your CloudOTP instance with personalized branding, themes, and UI elements to match your style.",
     hero: {
       title: "Make It Yours",
-      subtitle: "Customize server name, icon, description, and UI elements to create a personalized experience.",
+      subtitle:
+        "Customize server name, icon, description, and UI elements to create a personalized experience.",
     },
     benefits: [
       "Custom server name and description",
@@ -203,7 +221,8 @@ export const FEATURES = {
     useCases: [
       {
         title: "Corporate Branding",
-        description: "Match your company's visual identity and branding guidelines.",
+        description:
+          "Match your company's visual identity and branding guidelines.",
       },
       {
         title: "Personal Touch",
@@ -211,7 +230,8 @@ export const FEATURES = {
       },
       {
         title: "Team Identification",
-        description: "Differentiate between multiple Memos instances with custom branding.",
+        description:
+          "Differentiate between multiple CloudOTP instances with custom branding.",
       },
     ],
     techDetails: [
@@ -223,10 +243,12 @@ export const FEATURES = {
   },
   "api-first": {
     title: "API-First Design",
-    description: "Comprehensive RESTful API enables seamless integrations, custom applications, and automation workflows.",
+    description:
+      "Comprehensive RESTful API enables seamless integrations, custom applications, and automation workflows.",
     hero: {
       title: "Built for Integration",
-      subtitle: "Comprehensive REST API opens unlimited possibilities for custom integrations and workflows.",
+      subtitle:
+        "Comprehensive REST API opens unlimited possibilities for custom integrations and workflows.",
     },
     benefits: [
       "Complete REST API covering all functionality",
@@ -238,25 +260,34 @@ export const FEATURES = {
     useCases: [
       {
         title: "Custom Applications",
-        description: "Build custom frontends or mobile apps using the comprehensive API.",
+        description:
+          "Build custom frontends or mobile apps using the comprehensive API.",
       },
       {
         title: "Automation Workflows",
-        description: "Integrate with automation tools like Zapier, IFTTT, or custom scripts.",
+        description:
+          "Integrate with automation tools like Zapier, IFTTT, or custom scripts.",
       },
       {
         title: "Data Migration",
         description: "Import and export data from other systems using the API.",
       },
     ],
-    techDetails: ["OpenAPI 3.0 specification", "JWT-based authentication", "Rate limiting and throttling", "Comprehensive error handling"],
+    techDetails: [
+      "OpenAPI 3.0 specification",
+      "JWT-based authentication",
+      "Rate limiting and throttling",
+      "Comprehensive error handling",
+    ],
   },
   "database-support": {
     title: "Multi-Database Support",
-    description: "Choose from SQLite, PostgreSQL, or MySQL databases to match your infrastructure and performance needs.",
+    description:
+      "Choose from SQLite, PostgreSQL, or MySQL databases to match your infrastructure and performance needs.",
     hero: {
       title: "Your Database, Your Choice",
-      subtitle: "Flexible database support allows you to choose the best fit for your infrastructure and requirements.",
+      subtitle:
+        "Flexible database support allows you to choose the best fit for your infrastructure and requirements.",
     },
     benefits: [
       "SQLite for simple single-user deployments",
@@ -268,15 +299,18 @@ export const FEATURES = {
     useCases: [
       {
         title: "Single-User Setup",
-        description: "Use SQLite for personal instances with minimal configuration.",
+        description:
+          "Use SQLite for personal instances with minimal configuration.",
       },
       {
         title: "Team Collaboration",
-        description: "PostgreSQL or MySQL for multi-user environments with high concurrency.",
+        description:
+          "PostgreSQL or MySQL for multi-user environments with high concurrency.",
       },
       {
         title: "Enterprise Deployment",
-        description: "Integrate with existing database infrastructure and backup systems.",
+        description:
+          "Integrate with existing database infrastructure and backup systems.",
       },
     ],
     techDetails: [
@@ -288,10 +322,12 @@ export const FEATURES = {
   },
   "open-source": {
     title: "Open Source License",
-    description: "MIT licensed with full source code transparency, permissive usage terms, and community-driven development.",
+    description:
+      "MIT licensed with full source code transparency, permissive usage terms, and community-driven development.",
     hero: {
       title: "Truly Open Source",
-      subtitle: "MIT license ensures complete freedom to use, modify, and distribute Memos for any purpose.",
+      subtitle:
+        "MIT license ensures complete freedom to use, modify, and distribute CloudOTP for any purpose.",
     },
     benefits: [
       "MIT license with no usage restrictions",
@@ -303,15 +339,18 @@ export const FEATURES = {
     useCases: [
       {
         title: "Commercial Use",
-        description: "Deploy in commercial environments without licensing restrictions.",
+        description:
+          "Deploy in commercial environments without licensing restrictions.",
       },
       {
         title: "Educational Purposes",
-        description: "Use for teaching, learning, and academic research projects.",
+        description:
+          "Use for teaching, learning, and academic research projects.",
       },
       {
         title: "Custom Development",
-        description: "Fork and modify the codebase to create specialized versions.",
+        description:
+          "Fork and modify the codebase to create specialized versions.",
       },
     ],
     techDetails: [
@@ -323,10 +362,12 @@ export const FEATURES = {
   },
   "no-fees": {
     title: "Zero Subscription Fees",
-    description: "Use all features forever with no usage limits, premium tiers, or hidden costs - completely free and open.",
+    description:
+      "Use all features forever with no usage limits, premium tiers, or hidden costs - completely free and open.",
     hero: {
       title: "Free Forever",
-      subtitle: "All features available at no cost with no usage limits or premium restrictions.",
+      subtitle:
+        "All features available at no cost with no usage limits or premium restrictions.",
     },
     benefits: [
       "All features included with no premium tiers",
@@ -338,15 +379,18 @@ export const FEATURES = {
     useCases: [
       {
         title: "Personal Projects",
-        description: "Use for personal note-taking and knowledge management without any costs.",
+        description:
+          "Use for personal note-taking and knowledge management without any costs.",
       },
       {
         title: "Small Businesses",
-        description: "Deploy for teams without worrying about per-user licensing fees.",
+        description:
+          "Deploy for teams without worrying about per-user licensing fees.",
       },
       {
         title: "Educational Institutions",
-        description: "Provide to students and faculty without budget constraints.",
+        description:
+          "Provide to students and faculty without budget constraints.",
       },
     ],
     techDetails: [
@@ -358,10 +402,12 @@ export const FEATURES = {
   },
   community: {
     title: "Community-Driven Development",
-    description: "Transparent development process with active community contributions, feedback, and collaborative improvement.",
+    description:
+      "Transparent development process with active community contributions, feedback, and collaborative improvement.",
     hero: {
       title: "Built Together",
-      subtitle: "Active community of developers and users collaborating to make Memos better for everyone.",
+      subtitle:
+        "Active community of developers and users collaborating to make CloudOTP better for everyone.",
     },
     benefits: [
       "Transparent roadmap and development process",
@@ -373,15 +419,18 @@ export const FEATURES = {
     useCases: [
       {
         title: "Feature Requests",
-        description: "Suggest and vote on new features through community discussions.",
+        description:
+          "Suggest and vote on new features through community discussions.",
       },
       {
         title: "Bug Reporting",
-        description: "Report issues and collaborate on fixes with the development team.",
+        description:
+          "Report issues and collaborate on fixes with the development team.",
       },
       {
         title: "Knowledge Sharing",
-        description: "Learn from and share solutions with other Memos users.",
+        description:
+          "Learn from and share solutions with other CloudOTP users.",
       },
     ],
     techDetails: [
@@ -393,10 +442,12 @@ export const FEATURES = {
   },
   "self-hosted": {
     title: "Self-Hosted Architecture",
-    description: "Deploy Memos on your own infrastructure with complete control over access, security, and performance.",
+    description:
+      "Deploy CloudOTP on your own infrastructure with complete control over access, security, and performance.",
     hero: {
       title: "Your Server, Your Control",
-      subtitle: "Deploy anywhere from a Raspberry Pi to enterprise Kubernetes clusters with full infrastructure control.",
+      subtitle:
+        "Deploy anywhere from a Raspberry Pi to enterprise Kubernetes clusters with full infrastructure control.",
     },
     benefits: [
       "Deploy on any server, VPS, or cloud provider of your choice",
@@ -408,15 +459,18 @@ export const FEATURES = {
     useCases: [
       {
         title: "Home Lab Setup",
-        description: "Run Memos on your home server or NAS for personal and family use with complete privacy.",
+        description:
+          "Run CloudOTP on your home server or NAS for personal and family use with complete privacy.",
       },
       {
         title: "Small Team Deployment",
-        description: "Deploy on a small VPS or cloud instance for team collaboration without external dependencies.",
+        description:
+          "Deploy on a small VPS or cloud instance for team collaboration without external dependencies.",
       },
       {
         title: "Enterprise Infrastructure",
-        description: "Integrate with existing corporate networks, authentication systems, and compliance frameworks.",
+        description:
+          "Integrate with existing corporate networks, authentication systems, and compliance frameworks.",
       },
     ],
     techDetails: [
@@ -428,10 +482,12 @@ export const FEATURES = {
   },
   "no-dependencies": {
     title: "No External Dependencies",
-    description: "Work completely offline with zero external API calls, third-party services, or cloud dependencies.",
+    description:
+      "Work completely offline with zero external API calls, third-party services, or cloud dependencies.",
     hero: {
       title: "Truly Independent",
-      subtitle: "No internet connection required after installation - your notes work anywhere, anytime.",
+      subtitle:
+        "No internet connection required after installation - your notes work anywhere, anytime.",
     },
     benefits: [
       "Zero external API calls or third-party service dependencies",
@@ -443,15 +499,18 @@ export const FEATURES = {
     useCases: [
       {
         title: "Air-Gapped Environments",
-        description: "Perfect for secure environments where internet access is restricted or prohibited.",
+        description:
+          "Perfect for secure environments where internet access is restricted or prohibited.",
       },
       {
         title: "Remote Work Locations",
-        description: "Take your notes anywhere without worrying about internet connectivity or speed.",
+        description:
+          "Take your notes anywhere without worrying about internet connectivity or speed.",
       },
       {
         title: "Privacy-Critical Applications",
-        description: "Ensure absolutely no data leakage to external services or analytics platforms.",
+        description:
+          "Ensure absolutely no data leakage to external services or analytics platforms.",
       },
     ],
     techDetails: [
@@ -463,10 +522,12 @@ export const FEATURES = {
   },
   "instant-save": {
     title: "Instant Save",
-    description: "Never lose a thought with automatic persistence and streamlined input that saves as you type.",
+    description:
+      "Never lose a thought with automatic persistence and streamlined input that saves as you type.",
     hero: {
       title: "Capture Every Thought",
-      subtitle: "Lightning-fast input with automatic saving ensures you never lose important ideas or information.",
+      subtitle:
+        "Lightning-fast input with automatic saving ensures you never lose important ideas or information.",
     },
     benefits: [
       "Automatic saving as you type with no manual save button needed",
@@ -478,15 +539,18 @@ export const FEATURES = {
     useCases: [
       {
         title: "Meeting Notes",
-        description: "Capture meeting discussions and decisions in real-time without interruption.",
+        description:
+          "Capture meeting discussions and decisions in real-time without interruption.",
       },
       {
         title: "Brainstorming Sessions",
-        description: "Record rapid-fire ideas and thoughts without worrying about manual saving.",
+        description:
+          "Record rapid-fire ideas and thoughts without worrying about manual saving.",
       },
       {
         title: "Research Documentation",
-        description: "Document findings and insights as you discover them with automatic persistence.",
+        description:
+          "Document findings and insights as you discover them with automatic persistence.",
       },
     ],
     techDetails: [
@@ -498,10 +562,12 @@ export const FEATURES = {
   },
   "markdown-support": {
     title: "Rich Markdown Support",
-    description: "Full GitHub Flavored Markdown with syntax highlighting, tables, and advanced formatting options.",
+    description:
+      "Full GitHub Flavored Markdown with syntax highlighting, tables, and advanced formatting options.",
     hero: {
       title: "Write with Power",
-      subtitle: "Express your ideas with full Markdown support including syntax highlighting, tables, and rich formatting.",
+      subtitle:
+        "Express your ideas with full Markdown support including syntax highlighting, tables, and rich formatting.",
     },
     benefits: [
       "Complete GitHub Flavored Markdown (GFM) compatibility",
@@ -513,15 +579,18 @@ export const FEATURES = {
     useCases: [
       {
         title: "Technical Documentation",
-        description: "Create comprehensive technical docs with code blocks, diagrams, and structured content.",
+        description:
+          "Create comprehensive technical docs with code blocks, diagrams, and structured content.",
       },
       {
         title: "Academic Writing",
-        description: "Write research notes and papers with proper formatting, citations, and mathematical expressions.",
+        description:
+          "Write research notes and papers with proper formatting, citations, and mathematical expressions.",
       },
       {
         title: "Project Planning",
-        description: "Organize project requirements, tasks, and progress with structured Markdown formatting.",
+        description:
+          "Organize project requirements, tasks, and progress with structured Markdown formatting.",
       },
     ],
     techDetails: [
@@ -533,10 +602,12 @@ export const FEATURES = {
   },
   "media-integration": {
     title: "Media Integration",
-    description: "Native support for images, files, and multimedia content with drag-and-drop functionality.",
+    description:
+      "Native support for images, files, and multimedia content with drag-and-drop functionality.",
     hero: {
       title: "Rich Media Support",
-      subtitle: "Seamlessly integrate images, documents, and multimedia content into your notes with drag-and-drop simplicity.",
+      subtitle:
+        "Seamlessly integrate images, documents, and multimedia content into your notes with drag-and-drop simplicity.",
     },
     benefits: [
       "Drag-and-drop file uploads with progress indicators",
@@ -548,15 +619,18 @@ export const FEATURES = {
     useCases: [
       {
         title: "Visual Documentation",
-        description: "Create rich documentation with screenshots, diagrams, and visual explanations.",
+        description:
+          "Create rich documentation with screenshots, diagrams, and visual explanations.",
       },
       {
         title: "Project Archives",
-        description: "Store project files, assets, and related documents alongside your notes.",
+        description:
+          "Store project files, assets, and related documents alongside your notes.",
       },
       {
         title: "Learning Resources",
-        description: "Collect and organize educational content including videos, images, and reference materials.",
+        description:
+          "Collect and organize educational content including videos, images, and reference materials.",
       },
     ],
     techDetails: [

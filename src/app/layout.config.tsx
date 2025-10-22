@@ -12,8 +12,15 @@ export const baseOptions: BaseLayoutProps = {
   nav: {
     title: (
       <>
-        <Image src="/logo.png" alt="Memos" width={24} height={24} className="rounded" priority />
-        Memos
+        <Image
+          src="/logo.png"
+          alt="CloudOTP"
+          width={24}
+          height={24}
+          className="rounded"
+          priority
+        />
+        CloudOTP
       </>
     ),
   },
@@ -31,5 +38,5 @@ export const baseOptions: BaseLayoutProps = {
       url: "/changelog",
     },
   ],
-  githubUrl: "https://github.com/usememos/memos",
+  githubUrl: "https://github.com/Robert-Stackflow/CloudOTP",
 };

@@ -1,12 +1,26 @@
-import { defineConfig, defineDocs, frontmatterSchema, metaSchema } from "fumadocs-mdx/config";
+import {
+  defineConfig,
+  defineDocs,
+  frontmatterSchema,
+  metaSchema,
+} from "fumadocs-mdx/config";
 import { z } from "zod";
 
-// Enhanced schemas for Memos documentation
+// Enhanced schemas for CloudOTP documentation
 export const docs = defineDocs({
   docs: {
     schema: frontmatterSchema.extend({
       category: z
-        .enum(["installation", "guides", "configuration", "integrations", "api", "troubleshooting", "contributing", "faq"])
+        .enum([
+          "installation",
+          "guides",
+          "configuration",
+          "integrations",
+          "api",
+          "troubleshooting",
+          "contributing",
+          "faq",
+        ])
         .optional(),
       tags: z.array(z.string()).optional(),
       difficulty: z.enum(["beginner", "intermediate", "advanced"]).optional(),
@@ -57,7 +71,7 @@ export default defineConfig({
     rehypePlugins: [],
     remarkImageOptions: {
       // Ignore errors when fetching remote image sizes to avoid timeout issues
-      onError: 'ignore',
+      onError: "ignore",
     },
   },
 });

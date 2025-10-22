@@ -1,0 +1,13 @@
+---
+title: Release v3.1.1
+date: "2025-07-19"
+---
+
+## Upgrade Overview
+
+* Feature: Support for Google Drive, Aliyun Drive, Box, and Huawei Cloud.
+* Optimization: Improve UI performance on PC and tablet devices.
+* Optimization: Remove sensitive permissions on Android (installing apps, selecting images).
+* Fix: Issue where changing language, theme, light/dark mode, or font did not update certain pages in time.
+* Fix: Issue where enabling background lock caused abnormal locking during screenshot recognition or OAuth authentication via browser.
+  Due to limitations of services such as Google Drive, Box, Huawei Cloud, and Aliyun Drive, the OAuth authorization process needs to be proxied through the server [https://api.cloudchewie.com](https://api.cloudchewie.com) to ensure proper functionality. This server is built with Node.js, and the related code is open source and hosted on GitHub at [CloudOTP-OAuth](https://github.com/Robert-Stackflow/CloudOTP-OAuth).

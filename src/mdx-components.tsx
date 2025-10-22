@@ -4,7 +4,7 @@ import { Card, Cards } from "@/components/ui/card";
 import { Callout } from "@/components/ui/callout";
 import { CodeBlock } from "@/components/ui/code-block";
 
-// Custom MDX components for Memos documentation
+// Custom MDX components for CloudOTP documentation
 export function getMDXComponents(components?: MDXComponents): MDXComponents {
   return {
     ...defaultMdxComponents,

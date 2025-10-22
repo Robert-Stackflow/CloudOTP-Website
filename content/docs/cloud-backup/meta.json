@@ -1,0 +1,14 @@
+{
+  "title": "Cloud Backup",
+  "description": "Learn how to integrate Cloud Backup with CloudOTP",
+  "pages": [
+    "onedrive",
+    "dropbox",
+    "webdav",
+    "s3",
+    "google-drive",
+    "box",
+    "huawei-cloud",
+    "aliyunpan"
+  ]
+}

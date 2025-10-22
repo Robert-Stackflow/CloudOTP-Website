@@ -27,7 +27,7 @@ interface HeroSectionProps {
 }
 
 export function HeroSection({
-  version = "v0.25.1",
+  version = "v3.1.2",
   title,
   subtitle,
   primaryCta,
@@ -40,7 +40,7 @@ export function HeroSection({
       {version && (
         <div className="mb-4 sm:mb-6">
           <Link
-            href="https://github.com/usememos/memos/releases"
+            href="https://github.com/Robert-Stackflow/CloudOTP/releases/tag/V3.1.2"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-medium text-orange-800 dark:text-orange-200 bg-orange-100 dark:bg-orange-900/30 border border-orange-200 dark:border-orange-700 rounded-full hover:bg-orange-200 dark:hover:bg-orange-900/50 hover:shadow-sm transition-all"
@@ -53,9 +53,13 @@ export function HeroSection({
         </div>
       )}
 
-      <h1 className="max-w-4xl text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight px-2">{title}</h1>
+      <h1 className="max-w-4xl text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight px-2">
+        {title}
+      </h1>
 
-      <p className="mt-4 sm:mt-6 max-w-2xl text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-200 px-4">{subtitle}</p>
+      <p className="mt-4 sm:mt-6 max-w-2xl text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-200 px-4">
+        {subtitle}
+      </p>
 
       <div className="mt-6 sm:mt-8 flex flex-row gap-3 sm:gap-4 w-auto mx-auto">
         <Link

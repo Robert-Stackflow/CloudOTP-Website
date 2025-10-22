@@ -3,7 +3,11 @@ import Link from "next/link";
 import { ArrowLeftIcon } from "lucide-react";
 import { changelogSource } from "@/lib/source";
 import { DocsBody } from "fumadocs-ui/page";
-import { TOCProvider, TOCScrollArea, TOCItems } from "fumadocs-ui/components/layout/toc";
+import {
+  TOCProvider,
+  TOCScrollArea,
+  TOCItems,
+} from "fumadocs-ui/components/layout/toc";
 import { notFound } from "next/navigation";
 import { HomeLayout } from "fumadocs-ui/layouts/home";
 import { baseOptions } from "@/app/layout.config";
@@ -11,8 +15,6 @@ import { Footer } from "@/components/footer";
 import { getMDXComponents } from "@/mdx-components";
 import { ChangelogHeader } from "@/components/changelog-header";
 import { ChangelogFooter } from "@/components/changelog-footer";
-import { DocsSponsorCard } from "@/components/docs-sponsor-card";
-import { DocsCarbonAdCard } from "@/components/docs-carbon-ad-card";
 
 interface ChangelogPageProps {
   params: Promise<{ slug: string }>;
@@ -21,7 +23,9 @@ interface ChangelogPageProps {
 export const dynamic = "force-static";
 export const revalidate = 1800;
 
-export default async function ChangelogEntryPage({ params }: ChangelogPageProps) {
+export default async function ChangelogEntryPage({
+  params,
+}: ChangelogPageProps) {
   const { slug } = await params;
   const page = changelogSource.getPage([slug]);
 
@@ -48,7 +52,12 @@ export default async function ChangelogEntryPage({ params }: ChangelogPageProps)
             </Link>
 
             {/* Release Header */}
-            <ChangelogHeader version={version} date={data.date} isLatest={false} breaking={data.breaking} />
+            <ChangelogHeader
+              version={version}
+              date={data.date}
+              isLatest={false}
+              breaking={data.breaking}
+            />
           </div>
         </section>
 
@@ -64,10 +73,7 @@ export default async function ChangelogEntryPage({ params }: ChangelogPageProps)
               </article>
 
               {/* Mobile Ads - Show after content, before footer */}
-              <div className="xl:hidden mt-8 space-y-4">
-                <DocsSponsorCard />
-                <DocsCarbonAdCard />
-              </div>
+              <div className="xl:hidden mt-8 space-y-4"></div>
 
               {/* Footer */}
               <ChangelogFooter version={version} date={data.date} />
@@ -82,7 +88,9 @@ export default async function ChangelogEntryPage({ params }: ChangelogPageProps)
                   <div className="sticky top-24 space-y-4">
                     {/* TOC Card - Scrollable */}
                     <div className="p-1">
-                      <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">Table of Contents</h3>
+                      <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">
+                        Table of Contents
+                      </h3>
                       <TOCProvider toc={page.data.toc}>
                         <TOCScrollArea>
                           <TOCItems />
@@ -90,10 +98,7 @@ export default async function ChangelogEntryPage({ params }: ChangelogPageProps)
                       </TOCProvider>
                     </div>
                     {/* Sponsor & Ads - Also sticky with TOC */}
-                    <div className="flex flex-col gap-2">
-                      <DocsSponsorCard />
-                      <DocsCarbonAdCard />
-                    </div>
+                    <div className="flex flex-col gap-2"></div>
                   </div>
                 </div>
               </div>
@@ -115,13 +120,15 @@ export async function generateStaticParams() {
     .filter(({ slug }) => slug !== undefined);
 }
 
-export async function generateMetadata({ params }: ChangelogPageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: ChangelogPageProps): Promise<Metadata> {
   const { slug } = await params;
   const page = changelogSource.getPage([slug]);
 
   if (!page) {
     return {
-      title: "Changelog Entry Not Found - Memos",
+      title: "Changelog Entry Not Found - CloudOTP",
     };
   }
 
@@ -129,18 +136,18 @@ export async function generateMetadata({ params }: ChangelogPageProps): Promise<
   const version = data.title.replace("Release ", "");
 
   return {
-    title: `${version} Release Notes - Memos`,
-    description: data.description || `Release notes for Memos ${version}`,
+    title: `${version} Release Notes - CloudOTP`,
+    description: data.description || `Release notes for CloudOTP ${version}`,
     openGraph: {
       title: `${version} Release Notes`,
-      description: data.description || `Release notes for Memos ${version}`,
+      description: data.description || `Release notes for CloudOTP ${version}`,
       type: "article",
       publishedTime: data.date,
     },
     twitter: {
       card: "summary",
       title: `${version} Release Notes`,
-      description: data.description || `Release notes for Memos ${version}`,
+      description: data.description || `Release notes for CloudOTP ${version}`,
     },
   };
 }

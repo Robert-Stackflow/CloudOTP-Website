@@ -1,114 +1,57 @@
 ---
-title: What is Memos
-description: A modern, open-source, self-hosted knowledge management and note-taking platform designed for privacy-conscious users and organizations.
+title: Introduction
+description: CloudOTP is a two-factor authenticator based on Flutter, supports Android and Windows platforms, and supports cloud backup.
 ---
 
-**Memos** is a modern, open-source, self-hosted knowledge management and note-taking platform designed for privacy-conscious users and organizations. Memos provides a lightweight yet powerful solution for capturing, organizing, and sharing thoughts with comprehensive Markdown support and cross-platform accessibility.
-
-## Key Features
-
-### Privacy & Security
-
-- **Complete Data Ownership** — All data stored locally in your chosen database
-- **Self-Hosted Architecture** — Full control over infrastructure and access policies
-- **No External Dependencies** — Zero third-party services or cloud connections required
-
-### Content Creation
-
-- **Instant Save** — Streamlined plain text input with automatic persistence
-- **Rich Markdown Support** — Full Markdown rendering with syntax highlighting
-- **Media Integration** — Native support for images, links, and embedded content
-
-### Performance & Technology
-
-- **High-Performance Backend** — Built with Go for optimal resource utilization
-- **Modern React Frontend** — Responsive, intuitive user interface
-- **Lightweight Deployment** — Minimal system requirements, maximum efficiency
-- **Cross-Platform** — Linux, macOS, Windows, and containerized environments
-
-### Customization
-
-- **Configurable Interface** — Custom branding, themes, and UI elements
-- **API-First Design** — RESTful API for seamless third-party integrations
-- **Multi-Database Support** — SQLite, PostgreSQL, and MySQL compatibility
-
-### Cost-Effective
-
-- **Open Source (MIT)** — Full source code availability with permissive licensing
-- **Zero Subscription Fees** — No usage limits, premium tiers, or hidden costs
-- **Community-Driven** — Transparent development with active community support
-
-## Getting Started
-
-Ready to start using Memos? Get up and running in under 1 minute with our comprehensive guides:
-
-<Cards>
-  <Card title="Installation" href="/docs/installation" icon="Download">
-    Learn how to install Memos using Docker, binary, or development setup
-  </Card>
-  <Card title="User Guide" href="/docs/guides" icon="BookOpen">
-    Step-by-step guides for using Memos effectively
-  </Card>
-  <Card title="Configuration" href="/docs/configuration" icon="Settings">
-    Configure your Memos instance for optimal performance and security
-  </Card>
-  <Card title="Integrations" href="/docs/integrations" icon="Puzzle">
-    Connect Memos with external services and tools
-  </Card>
-</Cards>
-
-## Quick Start
-
-Get Memos running with Docker in under 1 minute:
-
-```bash
-docker run -d \
-  --name memos \
-  --restart unless-stopped \
-  -p 5230:5230 \
-  -v ~/.memos:/var/opt/memos \
-  neosmemo/memos:stable
-```
-
-Access Memos at `http://localhost:5230` and complete the initial setup.
-
-## API Documentation
-
-For comprehensive API documentation, visit our dedicated API documentation site:
-
-**[memos.apidocumentation.com](https://memos.apidocumentation.com)**
-
-The API documentation includes:
-- Complete REST API reference
-- Authentication guides
-- Code examples and SDKs
-- Interactive API explorer
-- Webhook configuration
+{/* <p align="center" style="display: flex;flex-wrap: wrap;justify-content: start;align-items: center;">
+  <a title="License" style={{marginRight: 1 + 'em'}} target="_blank" href="https://github.com/Robert-Stackflow/CloudOTP/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/Robert-Stackflow/CloudOTP.svg?style=flat" /></a>
+  <br />
+  <a title="GitHub Release" style={{marginRight: 1 + 'em'}} target="_blank" href="https://github.com/Robert-Stackflow/CloudOTP/releases"><img alt="GitHub Release" src="https://img.shields.io/github/v/release/Robert-Stackflow/CloudOTP?style=flat" /></a>
+  <a title="GitHub Commits" style={{marginRight: 1 + 'em'}} target="_blank" href="https://github.com/Robert-Stackflow/CloudOTP/commits/main"><img alt="GitHub Commits" src="https://img.shields.io/github/commit-activity/y/Robert-Stackflow/CloudOTP/main" /></a>
+  <br/><br/> 
+  <a title="GitHub Stars" style={{marginRight: 1 + 'em'}} target="_blank" href="https://github.com/Robert-Stackflow/CloudOTP/stargazers"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/Robert-Stackflow/CloudOTP.svg?label=Stars&style=social" /></a>  
+  <a title="GitHub Forks" style={{marginRight: 1 + 'em'}} target="_blank" href="https://github.com/Robert-Stackflow/CloudOTP/network/members"><img alt="GitHub Forks" src="https://img.shields.io/github/forks/Robert-Stackflow/CloudOTP.svg?label=Forks&style=social" /></a>  
+</p> */}
 
 ## Quick Links
 
-- [Docker Installation](/docs/installation/docker) - Get up and running in minutes
-- [Basic Usage Guide](/docs/guides/getting-started) - Learn the fundamentals
-- [Content Syntax](/docs/guides/content-syntax) - Master Markdown formatting
-- [API Documentation](https://memos.apidocumentation.com) - Complete API reference
+<Cards>
+  <Card title="Downloads" href="/docs/downloads" icon="Download">
+    Download CloudOTP for various platforms including Windows, macOS, and Linux.
+  </Card>
+  <Card title="Import and Export" href="/docs/import-export/import" icon="FileText">
+    Instructions for importing and exporting tokens using JSON, URI, or encrypted files.
+  </Card>
+  <Card title="User Guide" href="/docs/guides/about-otp" icon="BookOpen">
+    Comprehensive guides to help you use CloudOTP features efficiently.
+  </Card>
+  <Card title="Cloud Backup" href="/docs/cloud-backup/onedrive" icon="Settings">
+    Set up and manage cloud backups for OneDrive, Google Drive, and other services securely.
+  </Card>
+</Cards>
 
-## Why Choose Memos?
 
-Memos stands out as a lightweight, self-hosted alternative to cloud-based note-taking services. Built with privacy and performance in mind, it offers a comprehensive platform for personal knowledge management without compromising data ownership or security.
+## Features
 
-**Key Advantages:**
-- **Privacy-First**: Complete control over your data with local storage
-- **Performance**: High-performance Go backend with modern React frontend
-- **Flexibility**: Multi-database support and extensive customization options
-- **Cost-Effective**: Zero subscription fees with full MIT license freedom
+- Based on Flutter architecture refactoring, support for Android and Windows, will gradually support more platforms in the future
+- Support TOTP, HOTP, MOTP, Steam and Yandex.
+- Supports scanning code to add, recognizing pictures, and manually inputting keys.
+- Supports customized icons and categories, sorting and multiple token layouts.
+- Supports dark color mode, multiple languages, and multiple themes.
+- Support local backup and automatic backup, support WebDav, Onedrive, GoogleDrive, Dropbox, S3 storage and other cloud backup methods.
+- Supports import/export of encrypted files and URI lists.
+- Supports database encryption, gesture password, fingerprint unlocking.
 
-## Community & Support
+## Preview for Android
 
-- **GitHub**: [usememos/memos](https://github.com/usememos/memos)
-- **Documentation**: You're here! 📍
-- **Issues & Support**: [GitHub Issues](https://github.com/usememos/memos/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/usememos/memos/discussions)
+![mobile_1](arts/mobile_1.png)
 
----
+![mobile_2](arts/mobile_2.png)
 
-Have questions? Check out our [FAQ](/docs/faq) for answers to common questions.
+![mobile_3](arts/mobile_3.png)
+
+## Preview for Windows
+
+![desktop_1](arts/desktop_1.png)
+
+![desktop_2](arts/desktop_2.png)

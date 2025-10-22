@@ -10,8 +10,9 @@ export const dynamic = "force-static";
 export const revalidate = 1800;
 
 export const metadata: Metadata = {
-  title: "Blogs",
-  description: "Insights, updates, and stories from our journey building the best open-source note-taking platform.",
+  title: "Blog",
+  description:
+    "Personal insights, dev notes, and stories from an independent developer crafting secure and seamless authentication tools.",
 };
 
 export default function BlogPage() {
@@ -28,9 +29,12 @@ export default function BlogPage() {
           <div className="max-w-4xl mx-auto">
             {/* Hero Section */}
             <div className="mb-12 sm:mb-16 lg:mb-20">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-4 sm:mb-6 leading-tight">Blogs</h1>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-4 sm:mb-6 leading-tight">
+                Blogs
+              </h1>
               <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-                Insights, updates, and stories from our journey building the best open-source note-taking platform.
+                Personal insights, dev notes, and stories from an independent
+                developer crafting secure and seamless authentication tools.
               </p>
             </div>
 
@@ -59,14 +63,16 @@ export default function BlogPage() {
                           <div className="flex items-center gap-2 text-sm sm:text-base text-gray-500 dark:text-gray-400">
                             <CalendarIcon className="w-4 h-4 flex-shrink-0" />
                             <span className="whitespace-nowrap">
-                              {new Date(post.data.published_at).toLocaleDateString("en-US", {
+                              {new Date(
+                                post.data.published_at
+                              ).toLocaleDateString("en-US", {
                                 year: "numeric",
                                 month: "short",
                                 day: "numeric",
                               })}
                             </span>
                           </div>
-                          
+
                           {/* Tags */}
                           {post.data.tags && post.data.tags.length > 0 && (
                             <>
@@ -82,7 +88,7 @@ export default function BlogPage() {
                             </>
                           )}
                         </div>
-                        
+
                         {/* Read More - Only on desktop */}
                         <div className="hidden sm:flex items-center gap-2 text-sm font-medium text-teal-600 dark:text-teal-400 group-hover:gap-3 transition-all">
                           <span>Read more</span>
@@ -101,9 +107,12 @@ export default function BlogPage() {
                 <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center">
                   <UserIcon className="w-6 h-6 sm:w-8 sm:h-8 text-gray-400" />
                 </div>
-                <h3 className="text-base sm:text-lg font-medium text-gray-900 dark:text-gray-100 mb-2">No blog posts yet</h3>
+                <h3 className="text-base sm:text-lg font-medium text-gray-900 dark:text-gray-100 mb-2">
+                  No blog posts yet
+                </h3>
                 <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 px-4">
-                  Check back soon for insights and updates from the Memos team.
+                  I’m still working on some new articles — check back soon for
+                  thoughts and updates from an independent developer.
                 </p>
               </div>
             )}

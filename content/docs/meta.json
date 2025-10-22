@@ -2,10 +2,10 @@
   "title": "Documentation",
   "pages": [
     "index",
-    "installation",
+    "downloads",
     "guides",
-    "configuration",
-    "integrations",
-    "faq"
+    "import-export",
+    "cloud-backup",
+    "sqlcipher"
   ]
 }

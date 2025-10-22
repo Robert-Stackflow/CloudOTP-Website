@@ -33,4 +33,4 @@ Crawl-delay: 2
 Disallow: /_next/static/
 Disallow: /api/
 
-Sitemap: https://usememos.com/sitemap.xml
+Sitemap: https://otp.cloudchewie.com/sitemap.xml
