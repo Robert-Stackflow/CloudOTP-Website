@@ -17,7 +17,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
     "paths": {
       "@/.source": [
@@ -34,10 +34,14 @@
     ]
   },
   "include": [
-    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "index/types/**/*.ts",
+    "next-env.d.ts",
+    "dist/types/**/*.ts",
+    "dist\\dev/types/**/*.ts",
+    "dist\\dev/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"

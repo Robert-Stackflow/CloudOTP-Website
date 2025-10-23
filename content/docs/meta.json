@@ -2,7 +2,6 @@
   "title": "Documentation",
   "pages": [
     "index",
-    "downloads",
     "guides",
     "import-export",
     "cloud-backup",

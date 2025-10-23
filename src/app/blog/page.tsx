@@ -48,7 +48,7 @@ export default function BlogPage() {
                   <Link href={post.url} className="block">
                     {/* Content */}
                     <div>
-                      <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-3 sm:mb-4 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors tracking-tight">
+                      <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-3 sm:mb-4 group-hover:text-[var(--color-fd-primary)] dark:group-hover:text-[color-mix(in srgb, var(--color-fd-primary) 90%, white 20%)] transition-colors tracking-tight">
                         {post.data.title}
                       </h2>
 

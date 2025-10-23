@@ -12,16 +12,14 @@ export const docs = defineDocs({
     schema: frontmatterSchema.extend({
       category: z
         .enum([
-          "installation",
+          "downloads",
           "guides",
-          "configuration",
-          "integrations",
-          "api",
-          "troubleshooting",
-          "contributing",
-          "faq",
+          "import-export",
+          "cloud-backup",
+          "sqlcipher",
         ])
         .optional(),
+      index: z.boolean().default(false),
       tags: z.array(z.string()).optional(),
       difficulty: z.enum(["beginner", "intermediate", "advanced"]).optional(),
       estimatedTime: z.string().optional(),

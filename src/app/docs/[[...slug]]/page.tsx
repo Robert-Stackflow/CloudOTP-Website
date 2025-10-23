@@ -1,10 +1,7 @@
 import { source } from "@/lib/source";
-import {
-  DocsPage,
-  DocsBody,
-  DocsDescription,
-  DocsTitle,
-} from "fumadocs-ui/page";
+import { getPageTreePeers } from "fumadocs-core/page-tree";
+import { Card, Cards } from "fumadocs-ui/components/card";
+import { DocsPage } from "fumadocs-ui/page";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { createRelativeLink } from "fumadocs-ui/mdx";
@@ -21,21 +18,42 @@ export default async function Page(props: {
   const page = source.getPage(params.slug);
   if (!page) notFound();
 
-  const MDXContent = page.data.body;
+  const {
+    body: MDXContent,
+    full,
+    toc,
+    lastModified,
+    title,
+    description,
+    index,
+  } = page.data;
 
   return (
-    <DocsPage toc={page.data.toc} full={page.data.full} {...tocConfig}>
-      <DocsTitle>{page.data.title}</DocsTitle>
-      <DocsDescription>{page.data.description}</DocsDescription>
-      <DocsBody>
+    <DocsPage toc={toc} full={full} {...tocConfig}>
+      <h1 className="text-[1.75em] font-semibold">{title}</h1>
+      <p className="text-lg text-fd-muted-foreground mb-2">{description}</p>
+      <div className="flex flex-row gap-2 items-center border-b mb-3"></div>
+      <div className="prose flex-1 text-fd-foreground/90">
         <MDXContent
           components={getMDXComponents({
-            // this allows you to link to other pages with relative file paths
             a: createRelativeLink(source, page),
           })}
         />
-      </DocsBody>
+        {index ? <DocsCategory url={page.url} /> : null}
+      </div>
     </DocsPage>
+  );
+}
+
+function DocsCategory({ url }: { url: string }) {
+  return (
+    <Cards>
+      {getPageTreePeers(source.pageTree, url).map((peer) => (
+        <Card key={peer.url} title={peer.name} href={peer.url}>
+          {peer.description}
+        </Card>
+      ))}
+    </Cards>
   );
 }
 

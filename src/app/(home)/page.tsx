@@ -70,11 +70,13 @@ export default function HomePage() {
         title={
           <>
             Secure, <span className="block sm:inline">Cross-Platform</span>
-            <span className="block text-teal-600">Feel Safe, Stay Swift.</span>
+            <span className="block text-[var(--color-fd-primary)]">
+              Feel Safe, Stay Swift.
+            </span>
           </>
         }
         subtitle="A modern authenticator app for Android, Windows, and Linux — fast, private, and cloud-sync enabled."
-        primaryCta={{ text: "Download App", href: "/docs/downloads" }}
+        primaryCta={{ text: "Download App", href: "/changelog" }}
         secondaryCta={{
           text: "View on GitHub",
           href: "https://github.com/Robert-Stackflow/CloudOTP",
@@ -199,7 +201,7 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col gap-3 sm:gap-4 sm:flex-row sm:justify-center max-w-sm sm:max-w-none mx-auto">
             <Link
-              href="/docs/downloads"
+              href="/changelog"
               className="group inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold text-white bg-gradient-to-r from-teal-600 to-cyan-600 border border-transparent rounded-xl sm:rounded-2xl shadow-lg hover:from-teal-700 hover:to-cyan-700 hover:shadow-xl hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 transition-all duration-300"
             >
               <DownloadIcon className="w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform" />

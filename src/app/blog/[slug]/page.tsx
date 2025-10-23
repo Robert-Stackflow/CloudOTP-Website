@@ -142,7 +142,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
                         More Posts
                       </Link>
                       <a
-                        href="/docs/downloads"
+                        href="/changelog"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group inline-flex items-center justify-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-teal-600 to-cyan-600 text-white font-semibold rounded-xl sm:rounded-2xl hover:from-teal-700 hover:to-cyan-700 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 shadow-lg text-sm sm:text-base"

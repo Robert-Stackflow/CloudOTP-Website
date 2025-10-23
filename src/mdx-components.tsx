@@ -1,17 +1,20 @@
 import defaultMdxComponents from "fumadocs-ui/mdx";
 import type { MDXComponents } from "mdx/types";
-import { Card, Cards } from "@/components/ui/card";
-import { Callout } from "@/components/ui/callout";
-import { CodeBlock } from "@/components/ui/code-block";
+import * as FilesComponents from "fumadocs-ui/components/files";
+import * as TabsComponents from "fumadocs-ui/components/tabs";
+import * as AccordionComponents from "fumadocs-ui/components/accordion";
+import * as icons from "lucide-react";
+import { ImageZoom } from "fumadocs-ui/components/image-zoom";
 
 // Custom MDX components for CloudOTP documentation
 export function getMDXComponents(components?: MDXComponents): MDXComponents {
   return {
+    ...(icons as unknown as MDXComponents),
     ...defaultMdxComponents,
-    Card,
-    Cards,
-    Callout,
-    CodeBlock,
+    ...TabsComponents,
+    ...FilesComponents,
+    ...AccordionComponents,
+    img: (props) => <ImageZoom {...(props as any)} />,
     ...components,
   };
 }

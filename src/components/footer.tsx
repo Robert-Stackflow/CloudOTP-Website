@@ -26,7 +26,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/docs"
-                  className="text-fd-muted-foreground hover:text-fd-foreground transition-colors"
+                  className="text-fd-muted-foreground hover:text-[var(--color-fd-primary)] transition-colors"
                 >
                   Documentation
                 </Link>
@@ -34,7 +34,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/blog"
-                  className="text-fd-muted-foreground hover:text-fd-foreground transition-colors"
+                  className="text-fd-muted-foreground hover:text-[var(--color-fd-primary)] transition-colors"
                 >
                   Blog
                 </Link>
@@ -42,7 +42,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/changelog"
-                  className="text-fd-muted-foreground hover:text-fd-foreground transition-colors"
+                  className="text-fd-muted-foreground hover:text-[var(--color-fd-primary)] transition-colors"
                 >
                   Changelog
                 </Link>
@@ -61,7 +61,7 @@ export function Footer() {
                   href="https://github.com/Robert-Stackflow/CloudOTP"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-fd-muted-foreground hover:text-fd-foreground transition-colors"
+                  className="inline-flex items-center gap-1 text-fd-muted-foreground hover:text-[var(--color-fd-primary)] transition-colors"
                 >
                   <Github className="w-4 h-4" />
                   GitHub
@@ -72,7 +72,7 @@ export function Footer() {
                   href="https://t.me/CloudOTP_official"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-fd-muted-foreground hover:text-fd-foreground transition-colors"
+                  className="inline-flex items-center gap-1 text-fd-muted-foreground hover:text-[var(--color-fd-primary)] transition-colors"
                 >
                   Telegram
                   <ExternalLink className="w-3 h-3" />
@@ -83,7 +83,7 @@ export function Footer() {
                   href="https://github.com/Robert-Stackflow/CloudOTP/discussions"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-fd-muted-foreground hover:text-fd-foreground transition-colors"
+                  className="inline-flex items-center gap-1 text-fd-muted-foreground hover:text-[var(--color-fd-primary)] transition-colors"
                 >
                   Discussions
                   <ExternalLink className="w-3 h-3" />
@@ -101,7 +101,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/privacy"
-                  className="text-fd-muted-foreground hover:text-fd-foreground transition-colors"
+                  className="text-fd-muted-foreground hover:text-[var(--color-fd-primary)] transition-colors"
                 >
                   Privacy Policy
                 </Link>
@@ -109,7 +109,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/brand"
-                  className="text-fd-muted-foreground hover:text-fd-foreground transition-colors"
+                  className="text-fd-muted-foreground hover:text-[var(--color-fd-primary)] transition-colors"
                 >
                   Brand Guidelines
                 </Link>

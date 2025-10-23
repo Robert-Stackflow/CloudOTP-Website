@@ -64,7 +64,7 @@ export default function ChangelogPage() {
                     key={entry.url}
                     className={`relative bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-xl sm:rounded-2xl p-4 sm:p-5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 shadow-sm ${
                       isLatest
-                        ? "ring-2 ring-teal-500 border-teal-200 dark:border-teal-600"
+                        ? "ring-2 ring-[var(--color-fd-primary)] border-[color-mix(in srgb, var(--color-fd-primary) 20%, white 80%)] dark:border-[color-mix(in srgb, var(--color-fd-primary) 60%, black 40%)]"
                         : ""
                     }`}
                   >
@@ -72,7 +72,7 @@ export default function ChangelogPage() {
                       {/* Latest Badge */}
                       {isLatest && (
                         <div className="absolute -top-2 sm:-top-3 left-4 sm:left-6">
-                          <span className="px-2 sm:px-3 py-1 bg-teal-600 text-white text-xs sm:text-sm font-medium rounded-full">
+                          <span className="px-2 sm:px-3 py-1 bg-[var(--color-fd-primary)] hover:brightness-90 text-white text-xs sm:text-sm font-medium rounded-full transition-all">
                             Latest
                           </span>
                         </div>
@@ -81,7 +81,7 @@ export default function ChangelogPage() {
                       {/* Header */}
                       <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                         <div>
-                          <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+                          <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-[var(--color-fd-primary)] dark:group-hover:text-[color-mix(in srgb, var(--color-fd-primary) 90%, white 20%)] transition-colors">
                             {version}
                           </h2>
                           {entry.data.date && (
@@ -102,7 +102,7 @@ export default function ChangelogPage() {
                         </div>
 
                         <div className="sm:ml-auto">
-                          <div className="flex items-center gap-2 text-teal-600 dark:text-teal-400 font-semibold group-hover:gap-3 transition-all text-sm sm:text-base">
+                          <div className="flex items-center gap-2 text-[var(--color-fd-primary)] dark:text-[color-mix(in srgb, var(--color-fd-primary) 90%, white 20%)] font-semibold group-hover:gap-3 transition-all text-sm sm:text-base">
                             <span>View Details</span>
                             <ArrowRightIcon className="w-3 h-3 sm:w-4 sm:h-4" />
                           </div>
