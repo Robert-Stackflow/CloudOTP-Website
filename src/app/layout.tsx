@@ -2,6 +2,7 @@ import "@/app/global.css";
 import { RootProvider } from "fumadocs-ui/provider";
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
+import SearchDialog from "@/components/search";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://otp.cloudchewie.com"),
@@ -77,7 +78,13 @@ export default function Layout({ children }: { children: ReactNode }) {
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       </head>
       <body className="flex flex-col min-h-screen antialiased">
-        <RootProvider>{children}</RootProvider>
+        <RootProvider
+          search={{
+            SearchDialog,
+          }}
+        >
+          {children}
+        </RootProvider>
       </body>
     </html>
   );
