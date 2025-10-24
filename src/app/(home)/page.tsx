@@ -71,7 +71,7 @@ export default function HomePage() {
           <>
             Secure, <span className="block sm:inline">Cross-Platform</span>
             <span className="block text-[var(--color-fd-primary)]">
-              Feel Safe, Stay Swift.
+              Feel Safe, Stay Swift
             </span>
           </>
         }

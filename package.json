@@ -6,11 +6,12 @@
     "node": ">=22.0.0"
   },
   "scripts": {
-    "build": "next build && npm run sync",
+    "build": "next build && npm run sync && npm run upload",
     "dev": "next dev --turbo",
     "start": "next start",
     "postinstall": "fumadocs-mdx",
-    "sync": "bun scripts/sync-content.ts"
+    "sync": "bun scripts/sync-content.ts",
+    "upload": "bun scripts/upload-cos.ts"
   },
   "dependencies": {
     "algoliasearch": "^5.41.0",
@@ -32,6 +33,7 @@
     "@types/node": "24.3.0",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.1",
+    "cos-nodejs-sdk-v5": "^2.15.4",
     "eslint": "^8.57.1",
     "eslint-config-next": "15.4.6",
     "postcss": "^8.5.6",
