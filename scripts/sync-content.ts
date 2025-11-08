@@ -1,4 +1,4 @@
-import 'dotenv/config';
+import "dotenv/config";
 import { algoliasearch } from "algoliasearch";
 import { sync, DocumentRecord } from "fumadocs-core/search/algolia";
 import * as fs from "node:fs";
@@ -14,17 +14,17 @@ const content = fs.readFileSync(filePath);
 const records = JSON.parse(content.toString()) as DocumentRecord[];
 
 const ALGOLIA_APP_ID = process.env.ALGOLIA_APP_ID;
-const ALGOLIA_API_KEY = process.env.ALGOLIA_API_KEY;
+const ALGOLIA_ADMIN_KEY = process.env.ALGOLIA_ADMIN_KEY;
 const ALGOLIA_INDEX = process.env.ALGOLIA_INDEX_NAME ?? "document";
 
-if (!ALGOLIA_APP_ID || !ALGOLIA_API_KEY) {
+if (!ALGOLIA_APP_ID || !ALGOLIA_ADMIN_KEY) {
   console.error(
-    "❌ 缺少 Algolia 环境变量，请设置：ALGOLIA_APP_ID 和 ALGOLIA_API_KEY"
+    "❌ 缺少 Algolia 环境变量，请设置：ALGOLIA_APP_ID 和 ALGOLIA_ADMIN_KEY"
   );
   process.exit(1);
 }
 
-const client = algoliasearch(ALGOLIA_APP_ID, ALGOLIA_API_KEY);
+const client = algoliasearch(ALGOLIA_APP_ID, ALGOLIA_ADMIN_KEY);
 
 await sync(client, {
   indexName: ALGOLIA_INDEX,

@@ -6,12 +6,11 @@
     "node": ">=22.0.0"
   },
   "scripts": {
-    "build": "next build && npm run sync && npm run upload",
+    "build": "next build",
     "dev": "next dev --turbo",
     "start": "next start",
     "postinstall": "fumadocs-mdx",
-    "sync": "bun scripts/sync-content.ts",
-    "upload": "bun scripts/upload-cos.ts"
+    "sync": "bun scripts/sync-content.ts"
   },
   "dependencies": {
     "algoliasearch": "^5.41.0",
