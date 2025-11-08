@@ -15,9 +15,9 @@ import {
 import { useDocsSearch } from "fumadocs-core/search/client";
 import { useI18n } from "fumadocs-ui/contexts/i18n";
 
-const ALGOLIA_APP_ID = process.env.ALGOLIA_APP_ID || "";
-const ALGOLIA_API_KEY = process.env.ALGOLIA_API_KEY || "";
-const client = liteClient(ALGOLIA_APP_ID, ALGOLIA_API_KEY);
+const appId = process.env.ALGOLIA_APP_ID || "";
+const apiKey = process.env.ALGOLIA_API_KEY || "";
+const client = liteClient(appId, apiKey);
 
 export default function CustomSearchDialog(props: SharedProps) {
   const { locale } = useI18n(); // (optional) for i18n
