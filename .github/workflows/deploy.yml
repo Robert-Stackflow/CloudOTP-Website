@@ -1,9 +1,9 @@
-name: Build & Deploy Astro to COS
+name: Build & Deploy CloudOTP to COS
 
 on:
   push:
     branches:
-      - master
+      - main
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref_name }}
