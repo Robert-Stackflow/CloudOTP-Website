@@ -32,6 +32,9 @@ jobs:
           bun --version
 
       - name: Build CloudOTP site
+        env:
+          ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
+          ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
         run: |
           export PATH="$HOME/.bun/bin:$PATH"
           npm run build
